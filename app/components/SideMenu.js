@@ -13,7 +13,6 @@ import AsyncCall from '../actions/AsynCall';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Loader from '../utility/Loader.js';
 import moment from 'moment';
-import firebase from 'react-native-firebase';
 
 class SideMenu extends Component {
 	constructor(props) {
@@ -305,7 +304,6 @@ class SideMenu extends Component {
 	}
 
 	logoutSucceed = () => {
-		firebase.notifications().removeAllDeliveredNotifications()
 		this.removeItemValue(constants.authorization)
 		this.removeItemValue(constants.userType)
 		this.removeItemValue(constants.firstLoginKey)

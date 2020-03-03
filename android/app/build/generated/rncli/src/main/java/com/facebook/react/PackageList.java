@@ -26,8 +26,6 @@ import com.imagepicker.ImagePickerPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-webview
 import com.reactnativecommunity.webview.RNCWebViewPackage;
-// react-native-firebase
-import io.invertase.firebase.RNFirebasePackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 
@@ -81,7 +79,6 @@ public class PackageList {
       new ImagePickerPackage(),
       new LinearGradientPackage(),
       new RNCWebViewPackage(),
-      new RNFirebasePackage(),
       new RNGestureHandlerPackage()
     ));
   }

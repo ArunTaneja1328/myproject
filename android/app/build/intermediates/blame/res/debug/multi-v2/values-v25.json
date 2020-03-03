@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/arun.t/Desktop/Radex/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml",
+            "outputFile": "/Volumes/Macintosh HD 2/RNProjects/Radex/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "/Users/arun.t/.gradle/caches/transforms-2/files-2.1/48f2f04a4c006c826b0cf2e90245aae1/res/values-v25/values-v25.xml",
+                    "source": "/Users/Arun/.gradle/caches/transforms-2/files-2.1/a36ca797f3a51e3fff49d01c35a7aa92/res/values-v25/values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

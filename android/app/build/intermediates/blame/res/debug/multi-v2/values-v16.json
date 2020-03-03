@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/arun.t/Desktop/Radex/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/Volumes/Macintosh HD 2/RNProjects/Radex/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/arun.t/.gradle/caches/transforms-2/files-2.1/48f2f04a4c006c826b0cf2e90245aae1/res/values-v16/values-v16.xml",
+                    "source": "/Users/Arun/.gradle/caches/transforms-2/files-2.1/5c0a91da276de7561333b03ca1f0f63a/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/Arun/.gradle/caches/transforms-2/files-2.1/a36ca797f3a51e3fff49d01c35a7aa92/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "/Users/arun.t/.gradle/caches/transforms-2/files-2.1/7b31f61c93a0fbebd781cb4cd12ca08d/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

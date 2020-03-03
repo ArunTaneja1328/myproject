@@ -3,7 +3,6 @@ import { StyleSheet, ImageBackground } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
 import AsyncStorage from '@react-native-community/async-storage';
 import constants from '../../config/constants'
-import firebase from 'react-native-firebase';
 
 
 export default class SplashScreen extends Component {
@@ -25,60 +24,31 @@ export default class SplashScreen extends Component {
 	}
 
 	componentDidMount() {
-		firebase.notifications().getInitialNotification()
-			.then((notificationOpen: NotificationOpen) => {
-				if (notificationOpen) {
-					// App was opened by a notification
-					// Get the action triggered by the notification being opened
-					const action = notificationOpen.action;
-					// // Get information about the notification that was opened
-					const notification: Notification = notificationOpen.notification;
-					console.log("notification data ()()()", notification.data)
-					if (parseInt(notification.data.type) === 1) {
-						AsyncStorage.setItem(constants.accreditationStatus, notification.data.typeid)
-					}
-					// It will be triggered when you tapped onto the notification, write the code below what you want to do for all the types of notifications
-					var typeOfNotification;
-					typeOfNotification = parseInt(notification.data.type);
-
-					if (typeOfNotification === 1 || typeOfNotification === 2 || typeOfNotification === 3 || typeOfNotification === 4 || typeOfNotification === 7 || typeOfNotification === 9) {
-						setTimeout(() => this.gotoScreen('OfferScreen', {shouldShowAd: true}), 2000)
-					} else if (typeOfNotification === 6 || typeOfNotification === 8) {
-						setTimeout(() => this.gotoScreen('SeekCoachScreen',
-                        {
-                            shouldShowAd: true
-                        }), 2000)
+		AsyncStorage.getItem(constants.firstLoginKey).then((value) => {
+			if (value != null) {
+				AsyncStorage.getItem(constants.authorization).then((alreadyLoggedIn) => {
+					if (alreadyLoggedIn != null) {
+						AsyncStorage.getItem(constants.userType).then((userType) => {
+							if (userType == 2) {
+								setTimeout(() => this.gotoScreen('OfferScreen', { shouldShowAd: true }), 2000)
+							} else if (userType == 3) {
+								setTimeout(() => this.gotoScreen('AvatarScreen', {}), 2000)
+							}
+						}).catch((error) => {
+							this.setState({ loading: false })
+						})
 					} else {
+						setTimeout(() => this.gotoScreen, 2000)
 					}
-					firebase.notifications().removeDeliveredNotification(notification.notificationId);
-				} else {
-					AsyncStorage.getItem(constants.firstLoginKey).then((value) => {
-						if (value != null) {
-							AsyncStorage.getItem(constants.authorization).then((alreadyLoggedIn) => {
-								if (alreadyLoggedIn != null) {
-									AsyncStorage.getItem(constants.userType).then((userType) => {
-										if (userType == 2) {
-											setTimeout(() => this.gotoScreen('OfferScreen', {shouldShowAd: true}), 2000)
-										} else if (userType == 3) {
-											setTimeout(() => this.gotoScreen('AvatarScreen', {}), 2000)
-										}
-									}).catch((error) => {
-										this.setState({ loading: false })
-									})
-								} else {
-									setTimeout(() => this.gotoScreen, 2000)
-								}
-							}).catch((error) => {
-								this.setState({ loading: false })
-							})
-						} else {
-							setTimeout(() => this.gotoScreen('ChooseUserScreen', {}), 2000)
-						}
-					}).catch((error) => {
-						this.setState({ loading: false })
-					})
-				}
-			});
+				}).catch((error) => {
+					this.setState({ loading: false })
+				})
+			} else {
+				setTimeout(() => this.gotoScreen('ChooseUserScreen', {}), 2000)
+			}
+		}).catch((error) => {
+			this.setState({ loading: false })
+		})
 	}
 
 	render() {

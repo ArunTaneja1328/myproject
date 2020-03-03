@@ -5,7 +5,6 @@ import AsyncStorage from '@react-native-community/async-storage'
 import ApiActionNames from '../actions/ApiActionNames.js';
 import { NavigationActions, StackActions } from 'react-navigation';
 import { strings } from '../../src/i18n';
-import firebase from 'react-native-firebase';
 
 export default class AsynCall {
 
@@ -20,7 +19,6 @@ export default class AsynCall {
   }
 
   static logoutSucceed = (navigation) => {
-    firebase.notifications().removeAllDeliveredNotifications()
     this.removeItemValue(constants.authorization)
     this.removeItemValue(constants.userType)
     this.removeItemValue(constants.firstLoginKey)
