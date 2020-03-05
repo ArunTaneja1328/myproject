@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     fontSize: 33,
     textAlign: "center",
-    color: colors.lightText,
+    color: colors.darkBlue,
   },
   welcomeSubText: {
     fontFamily: "Roboto-Light",

@@ -30,9 +30,9 @@ export default class SplashScreen extends Component {
 					if (alreadyLoggedIn != null) {
 						AsyncStorage.getItem(constants.userType).then((userType) => {
 							if (userType == 2) {
-								setTimeout(() => this.gotoScreen('OfferScreen', { shouldShowAd: true }), 2000)
+								setTimeout(() => this.gotoScreen('DriverHomeScreen', { shouldShowAd: true }), 2000)
 							} else if (userType == 3) {
-								setTimeout(() => this.gotoScreen('AvatarScreen', {}), 2000)
+								setTimeout(() => this.gotoScreen('MerchantHomeScreen', {}), 2000)
 							}
 						}).catch((error) => {
 							this.setState({ loading: false })
@@ -44,7 +44,7 @@ export default class SplashScreen extends Component {
 					this.setState({ loading: false })
 				})
 			} else {
-				setTimeout(() => this.gotoScreen('ChooseUserScreen', {}), 2000)
+				setTimeout(() => this.gotoScreen('WelcomeScreen', {}), 2000)
 			}
 		}).catch((error) => {
 			this.setState({ loading: false })

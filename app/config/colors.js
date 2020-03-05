@@ -1,4 +1,5 @@
-export default {  
+export default {
+  darkBlue:'#5032E8',
   white: 'white',
   black: 'black',
   red: 'red',
@@ -21,8 +22,8 @@ export default {
   darkGrey: '#725D90',
   lightGrey: '#A8A8A8',
   appleGrey: 'rgba(206, 206, 206, 0.7)',
-  linearStart: '#3970BC',
-  linearEnd: '#D6294F',
+  linearStart: '#5647FF',
+  linearEnd: '#FF8080',
   regularButtonText: '#484848',
   borderColor: '#D7C9EB',
   lightText:'#7B7B7B',

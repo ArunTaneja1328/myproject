@@ -4,10 +4,10 @@
   },
   "WelcomeScreen": {
     "welcomeTitle": "WELCOME!",
-    "welcomeSubTitle": "to your digital coach",
-    "createAs": "Create account as",
-    "coachee":"User",
-    "coach":"Coach"
+    "welcomeSubTitle": "Nice to see you on Radex",
+    "createAs": "Our all vehicles are GPS enabled.",
+    "login":"LOGIN",
+    "signup":"SIGNUP"
   },
   "LoginScreen": {
     "loginCapital": "LOGIN",

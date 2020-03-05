@@ -52,7 +52,7 @@ goToSignup = (type) => {
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 0 }}
             >
-              <Text style={styles.text}>{strings('WelcomeScreen.coachee')}</Text>
+              <Text style={styles.text}>{strings('WelcomeScreen.login')}</Text>
             </LinearGradient>
           </TouchableOpacity>
           <TouchableOpacity
@@ -61,17 +61,8 @@ goToSignup = (type) => {
               this.goToSignup("2")
             }
           >
-            <Text style={styles.regularButtonText}>{strings('WelcomeScreen.coach')}</Text>
+            <Text style={styles.regularButtonText}>{strings('WelcomeScreen.signup')}</Text>
           </TouchableOpacity>
-          <View style = {styles.bottom}>
-          <TouchableOpacity
-            onPress={() =>
-              this.goBackToLogin()
-            }
-          >
-            <Text style={styles.regularButtonText}>{strings('SignupScreen.haveAnExistingAccount')}</Text>
-          </TouchableOpacity>
-          </View>
         </View>
       </ScrollView>
     );
