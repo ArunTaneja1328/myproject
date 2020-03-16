@@ -1,8 +1,8 @@
 export default {
   // baseUrl: 'http://10.0.0.72:7001/api/',
   // imageBaseUrl: 'http://10.0.0.72:7001/',
-  baseUrl: 'http://10.0.0.101/TheDigitalCoachEnc/public/api/',
-  imageBaseUrl: 'http://10.0.0.101/TheDigitalCoachEnc/public/',
+  baseUrl: 'http://13.126.43.6/api/',
+  imageBaseUrl: 'http://13.126.43.6/',
   // baseUrl: 'http://112.196.30.243:9000/api/',
   // imageBaseUrl: 'http://112.196.30.243:9000/',
   authorization: 'Authorization',

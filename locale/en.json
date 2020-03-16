@@ -28,25 +28,21 @@
   "SignupScreen": {
     "signupTitle": "Sign up",
     "signup": "Sign up",
-    "pseudonym": "Pseudonym *",
+    "businessName": "Business Name *",
     "email":"Email address *",
     "password":"Password *",
-    "firstName": "First name *",
-    "lastName": "Last name *",
-    "dob": "Date of birth *",
-    "gender": "Gender *",
+    "userName": "User Name *",
+    "phoneNumber": "Mobile No.",
     "confirmEmail": "Confirm email address *",
-    "zip": "Zip code *",
-    "place": "City *",
-    "country": "Country *",
     "confirmPassword": "Confirm password *",
     "iaccept": "I accept the ",
     "agb": "Terms and Conditions",
     "privacyPolicy": " Data Privacy Declaration",
-    "privacyPolicySideBar": "Data Privacy Declaration",
     "verifyLinkSent": "We have sent you a link to verify your email account. Please click on link to verify it.",
     "haveAnExistingAccount":"Already a registered user? Login",
-    "emailLanguage":"Notification language *"
+    "signupAs":"Create an account as",
+    "user": "Merchant",
+    "driver": "Driver"
   },
   "Error": {
     "notConnectedToInternet": "Internet not connected. Please check your network connection and try a little later.",
@@ -275,7 +271,8 @@
     "oldPwd":"Current password",
     "newPwd":"New password",
     "confirmPwd": "Confirm password",
-    "submit": "Submit"
+    "submit": "Submit",
+    "resendCode": "Resend Code"
   },
   "DiaryScreen": {
     "diaryTitle": "Diary",

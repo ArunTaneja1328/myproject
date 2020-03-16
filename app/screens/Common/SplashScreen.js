@@ -55,7 +55,7 @@ export default class SplashScreen extends Component {
 		return (
 			<ImageBackground
 				style={styles.container}
-				source={require('../../assets/images/splash/Splash_Screen.png')}
+				source={require('../../assets/images/splash/splash.png')}
 			>
 			</ImageBackground>
 		);

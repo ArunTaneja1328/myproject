@@ -18,6 +18,8 @@ import com.radex.R;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 // react-native-device-info
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
+// react-native-gesture-handler
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-i18n
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 // react-native-image-picker
@@ -26,8 +28,6 @@ import com.imagepicker.ImagePickerPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-webview
 import com.reactnativecommunity.webview.RNCWebViewPackage;
-// react-native-gesture-handler
-import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 
 public class PackageList {
   private Application application;
@@ -75,11 +75,11 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
       new RNDeviceInfo(),
+      new RNGestureHandlerPackage(),
       new RNI18nPackage(),
       new ImagePickerPackage(),
       new LinearGradientPackage(),
-      new RNCWebViewPackage(),
-      new RNGestureHandlerPackage()
+      new RNCWebViewPackage()
     ));
   }
 }

@@ -15,7 +15,7 @@ export default class WelcomeScreen extends Component {
     super(props) 
   };
 
-  goBackToLogin = () => {
+  goToLogin = () => {
     const resetAction = StackActions.reset({
         index: 0,
         actions: [NavigationActions.navigate({ routeName: 'LoginScreen' })],
@@ -23,16 +23,15 @@ export default class WelcomeScreen extends Component {
     this.props.navigation.dispatch(resetAction)
 }
 
-goToSignup = (type) => {
-  AsyncStorage.setItem(constants.userType, type)
-  this.props.navigation.navigate('SignupScreen', { signupType: parseInt(type) })
+goToSignup = () => {
+  this.props.navigation.navigate('SignupScreen')
 }
 
   render() {
     return (
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <ImageBackground resizeMode='stretch' style={[styles.imageContainer, { backgroundColor: '#fff' }]}
-          source={require('../../assets/images/login/bgtop1.png')}>
+          source={require('../../assets/images/splash/bgtop.png')}>
         </ImageBackground>
         <View style={styles.centerContainer}>
           <Text style={styles.welcomeText}> {strings('WelcomeScreen.welcomeTitle')}
@@ -44,7 +43,7 @@ goToSignup = (type) => {
           <Text style={styles.createAsText}> {strings('WelcomeScreen.createAs')}
           </Text>
           <TouchableOpacity style={styles.gradientContainer} onPress={() =>
-            this.goToSignup("3")
+            this.goToLogin()
           }>
             <LinearGradient
               colors={[colors.linearStart, colors.linearEnd]}
@@ -58,7 +57,7 @@ goToSignup = (type) => {
           <TouchableOpacity
             style={styles.regularButton}
             onPress={() =>
-              this.goToSignup("2")
+              this.goToSignup()
             }
           >
             <Text style={styles.regularButtonText}>{strings('WelcomeScreen.signup')}</Text>

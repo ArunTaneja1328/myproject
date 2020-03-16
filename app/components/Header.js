@@ -5,7 +5,6 @@ import colors from '../config/colors';
 import LinearGradient from 'react-native-linear-gradient';
 import { strings } from '../../src/i18n'
 import { styles } from '../config/styles.js';
-import ToggleSwitch from 'toggle-switch-react-native';
 
 export default class Header extends Component {
 
@@ -17,7 +16,6 @@ export default class Header extends Component {
     edit: this.props.edit ? this.props.edit : false,
     save: this.props.save ? this.props.save : false,
     add: this.props.add ? this.props.add : false,
-    toggleSwitch: this.props.toggleSwitch ? this.props.toggleSwitch : false,
     isOnline: this.props.isOnline ? this.props.isOnline : false,
     endChat: this.props.endChat ? this.props.endChat : false,
   }
@@ -66,16 +64,6 @@ export default class Header extends Component {
     }
   }
 
-  togglePress = (isOn) => {
-    if (this.props.togglePress) {
-      this.setState({
-        isOnline: isOn
-      }, () => {
-        this.props.togglePress(isOn)
-      })
-    }
-  }
-
   endChatPress = () => {
     if (this.props.endChatPress) {
       this.props.endChatPress()
@@ -91,7 +79,6 @@ export default class Header extends Component {
       edit: nextProps.edit ? nextProps.edit : false,
       save: nextProps.save ? nextProps.save : false,
       add: nextProps.add ? nextProps.add : false,
-      toggleSwitch: nextProps.toggleSwitch ? nextProps.toggleSwitch : false,
       isOnline: nextProps.isOnline ? nextProps.isOnline : false,
       endChat: nextProps.endChat ? nextProps.endChat : false,
     })
@@ -173,20 +160,6 @@ export default class Header extends Component {
             >
               <Text style={styles.text}>{strings('HeaderBarButtons.add')}</Text>
             </TouchableOpacity>
-          }
-          {this.state.toggleSwitch &&
-            <View style={{ position: 'absolute', right: 15, paddingTop: 40 }}>
-            <ToggleSwitch
-                isOn={this.state.isOnline}
-                onColor='green'
-                offColor='grey'
-                labelStyle={{ color: 'black', fontWeight: '900' }}
-                size='medium'
-                onToggle={(isOn) => { 
-                    this.togglePress(isOn)
-                }}
-            />
-            </View>
           }
           {this.state.endChat &&
             <TouchableOpacity

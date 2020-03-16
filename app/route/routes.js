@@ -10,7 +10,8 @@ import SideMenu from '../components/SideMenu';
 import LoginScreen from '../screens/Common/LoginScreen';
 import SignupScreen from '../screens/Common/SignupScreen';
 import DriverProfile from '../screens/Driver/DriverProfile';
-import MerchantProfile from '../screens/Merchant/MerchantProfile'; 
+import MerchantProfile from '../screens/Merchant/MerchantProfile';
+import OtpVerifyScreen from '../screens/Common/OtpVerifyScreen' 
 
 // const DriverDrawerNavigator = createDrawerNavigator(
 // 	{
@@ -53,6 +54,12 @@ const RootStack = createStackNavigator({
 	},
 	SignupScreen: {
 		screen: SignupScreen,
+		navigationOptions: {
+			header: null,
+		},
+	},
+	OtpVerifyScreen: {
+		screen: OtpVerifyScreen,
 		navigationOptions: {
 			header: null,
 		},

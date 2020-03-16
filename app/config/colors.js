@@ -35,5 +35,6 @@ export default {
   profileHeaderGrey: 'rgba(100, 121, 182, 0.13)',
   whiteWithAlpha12: 'rgba(255, 255, 255, 0.12)',
   whiteWithAlpha5: 'rgba(255, 255, 255, 0.5)',
-  blackWithAlpha5: 'rgba(0, 0, 0, 0.5)'
+  blackWithAlpha5: 'rgba(0, 0, 0, 0.5)',
+  otpBlue: '#4D3BFA'
 }

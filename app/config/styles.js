@@ -11,9 +11,22 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
-    width: '100%',
-    height: 100,
+    width: '90%',
+    height: 120,
+    marginTop: 0,
+    bottom:100,
+    backgroundColor: 'white',
+    borderRadius:10
   },
+  otpContainer: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '90%',
+    height: 300,
+    backgroundColor: 'white',
+  },
+
   bottom: {
     flex: 1,
     justifyContent: 'flex-end',
@@ -29,7 +42,7 @@ export const styles = StyleSheet.create({
     height: 100
   },
   imageContainer: {
-    height: Dimensions.get('window').width * 0.928,
+    height: Dimensions.get('window').width * 1.1,
     width: '100%',
     backgroundColor: colors.white,
   },
@@ -142,9 +155,10 @@ export const styles = StyleSheet.create({
   },
   bottomContainerWelcome: {
     width: '100%',
-    height: 200,
+    height: 100,
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    bottom: 120
   },
   bottomContainerForgot: {
     width: '100%',
@@ -174,7 +188,7 @@ export const styles = StyleSheet.create({
     marginTop: 8
   },
   contentContainer: {
-    paddingBottom: 60
+    paddingBottom: 0
   },
   headerView: {
     width: '100%',
@@ -215,6 +229,11 @@ export const styles = StyleSheet.create({
     color: colors.darkGrey,
     fontFamily: "Roboto-Medium",
     marginLeft: 8
+  },
+  otpText:{
+    fontSize: 20,
+    color: colors.otpBlue,
+    fontFamily: "Roboto-Medium",
   },
   agbTextWithoutLeftMargin:{
     fontSize: 16,
@@ -556,5 +575,24 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     color: colors.darkGrey,
     fontFamily: "Roboto-Regular"
+  },
+  borderStyleBase: {
+    width: 30,
+    height: 45
+  },
+
+  borderStyleHighLighted: {
+    borderColor: "#7F7F7F",
+  },
+
+  underlineStyleBase: {
+    width: 30,
+    height: 45,
+    borderWidth: 0,
+    borderBottomWidth: 1,
+  },
+
+  underlineStyleHighLighted: {
+    borderColor: "#7F7F7F",
   },
 });
